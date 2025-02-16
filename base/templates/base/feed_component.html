@@ -1,0 +1,44 @@
+{% load static %}
+
+{% for room in rooms %}
+
+<div class="middle-col-2">
+    <div class="panel-1">
+        <div class="panel-left">
+            <img src="{% static 'images/ellipse2.png' %}" alt="" srcset="">
+            <p style="font-size: 19px;">Host <a href="{% url 'user-profile' room.host.id %}" style="text-decoration: none;
+            color: #fff;"> @{{ room.host.username }} </a></p>
+        </div>
+        <p>{{ room.created|timesince }} ago</p>
+    </div>
+
+    <div class="panel-2">
+        <div class="title">
+
+            <a href="{% url 'room' room.id %}" style="text-decoration: none;"><h2>{{ room.name }}</h2></a>
+        
+        </div>
+        <div class="partic">
+            <img src="{% static 'images/ellipse2.png' %}" alt="" srcset="">
+            <img src="{% static 'images/ellipse2.png' %}" alt="" srcset="">
+            <img src="{% static 'images/ellipse2.png' %}" alt="" srcset="">
+            <img src="{% static 'images/ellipse2.png' %}" alt="" srcset="">
+            <img src="{% static 'images/ellipse2.png' %}" alt="" srcset="">
+            <img src="{% static 'images/ellipse2.png' %}" alt="" srcset="">
+            
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="panel-3">
+        <div class="panLeft">
+            <i class="fa fa-users" aria-hidden="true"></i><p>{{ room.participants.all.count }} Joined</p>
+        </div>
+        <p>{{ room.topic.name }}</p>
+    </div>
+</div>
+
+{% endfor %}
+
+

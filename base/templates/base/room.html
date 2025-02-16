@@ -1,0 +1,83 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'styles/room.css' %}">
+
+
+    <div class="container">
+
+        <div class="left-container">
+            <div class="row-1">
+                <div class="title">
+                    <h1>{{ room.name }}</h1>
+                    <p>{{ room.created|timesince }} ago</p>
+                </div>
+                <button>JOIN</button>
+            </div>
+
+            <div class="row-2">
+                <p>Hosted By</p>
+                <div class="profile">
+                    <img src="{% static '/images/ellipse2.png' %}" alt="">
+                    <p>@erik</p>
+                </div>
+            </div>
+
+                <div id="chat-container" class="chat-container" style=" background-image: url({% static '/images/chatBg.png'%});">
+                    <div id="chat-messages" class="chat-messages">
+                      <!-- Sample messages will be appended here -->
+                      {% for message in room_messages %}
+                        <div class="message">
+                            {% if request.user == message.user %}
+                            <a href="{% url 'delete-message' message.id %}" style="text-decoration:none; color:#fff;">Delete</a>
+                            {% endif %}
+                            <div class="prod">
+                                <img src="{% static '/images/ellipse2 (1).png' %}" alt="" srcset="">
+                                <h4>@{{ message.user }}</h4>
+                                <p>Sent at {{ message.created|timesince }}</p>
+                            </div>
+                            <p class="chat">
+                                {{ message.body }}
+                            </p>
+                        </div>
+                      {% endfor %}
+
+                    </div>
+
+                    {% if request.user.is_authenticated %}
+
+                    <form method="POST" action="" id="chat-form" class="chat-form" style="top: 77%;">
+                        {% csrf_token %}    
+                      <input type="text" name="body" id="message-input" placeholder="Type your message here...">
+                      <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    </form>
+                    {% endif %}
+                </div>                  
+
+
+        </div>
+
+        <div class="right-container">
+            <h2>PARTICIPANTS</h2>
+            <hr>
+            
+            <div class="partic">
+                {% for user in participants %}
+                <div class="part">
+                    <div class="cont">
+                        <img src="{% static '/images/ellipse2.png'%}" alt="" srcset="">
+                        <p>{{ user.username }}</p>
+                    </div>
+                    <button>Follow</button>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+
+    </div>
+    {% endblock %}

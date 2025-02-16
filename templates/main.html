@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed-PlanX</title>
+  <link rel="stylesheet" href="{% static 'styles/feed.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+
+    {% if messages %}
+        <ul class="messages">
+    {% for message in messages %}
+        <li>{{ message }}</li>
+    {% endfor %}
+        </ul>
+{% endif %} 
+          
+    {% block content %}
+
+
+    {% endblock %}
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

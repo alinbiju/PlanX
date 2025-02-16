@@ -1,0 +1,251 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlanX</title>
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo-name"><a href="#"><img src="{% static 'images/Logo.png' %}" class="logo"></a>
+      <p>PlanX</p>
+    </div>
+    <div class="navbar" id="navbar">
+      <ul class="nav-links">
+          <!-- <li><a href="holiday.html">Holidays</a></li> -->
+          <!-- <li><a href="hotels.html">Hotels</a></li> -->
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#abt">About Us</a></li>
+      </ul>
+      <a href="{% url 'login' %}" class="login-btn"><i class="fa fa-user"></i></a>
+      
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </header>
+
+  <div class="container" id="home">
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="width: 76px; position: absolute;">
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="width: 36px; position: absolute; top: 15%; left: 112px;">
+
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="    
+    width: 54px;
+    left: 78%;
+    top: 73%;
+    transform: rotate(329deg);
+    position: absolute;">
+    <img src="images/vector.png" alt="" class="vector" style="    
+    width: 64px;
+    position: absolute;
+    top: 36%;
+    left: 1278px;">
+
+
+    <div class="buttonCont">
+      <a href="{% url 'homepage' %}"><button class="button-1">Join</button></a>
+      <a href="{% url 'create-room' %}"><button class="button-2">Create</button></a>
+  </div>
+    <div class="img-container">
+      <div class="obj"><img src="{% static 'images/vector1.png' %}"></div>
+      <img src="{% static 'images/studyAnimals.png' %}" alt="studyAnimals" class="img-cont">
+    </div>
+    <div class="desc">
+      <h1>Plan, Discuss, Connect...</h1>
+      <p>Your digital hub for lively discussions and collaborative planning. <br>
+        Join us to share ideas, exchange perspectives, and bring your plans to life.</p>
+        <a href="{% url 'homepage' %}"><button class="button">Know More</button></a>
+    </div>
+  </div>
+  
+  <div class="container">
+
+
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="    
+    width: 98px;
+    left: 7%;
+    top: 22%;
+    transform: rotate(329deg);
+    position: absolute;">
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="    
+    width: 32px;
+    position: absolute;
+    top: 14%;
+    left: 221px;">
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="    
+    width: 40px;
+    position: absolute;
+    top: 3%;
+    transform: rotate(343deg);
+    left: 78px;">
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="    
+    width: 64px;
+    position: absolute;
+    top: 68%;
+    transform: rotate(343deg);
+    left: 1092px;">
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="    
+    width: 35px;
+    position: absolute;
+    top: 77%;
+    transform: rotate(293deg);
+    left: 1043px;">
+
+    <div class="desc-2">
+      <h1>Join or Create Discussion Rooms</h1>
+      <p>Encourage users to join existing discussion rooms or <br>create their own on topics of interest.</p>
+        <button class="white-button">Join</button>
+        <button class="button">Create</button> 
+    </div>
+    <div class="img-container-2">
+      <div class="obj"><img src="{% static 'images/vector2.png' %}"></div>
+      <div class="obj-2"><img src="{% static 'images/vector3.png' %}"></div>
+      <img src="{% static 'images/penguinPhone.png' %}" alt="studyAnimals" class="img-cont">
+      <img src="{% static 'images/Penguineggs.png' %}" alt="studyAnimals" class="img-cont-2">
+    </div>
+    
+  </div>
+
+  <div class="container-2">
+
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="    
+    width: 68px;
+    left: 7%;
+    top: -16%;
+    transform: rotate(329deg);
+    position: absolute;">
+    <img src="{% static 'images/vector.png' %}" alt="" class="vector" style="    
+    width: 92px;
+    position: absolute;
+    top: -31%;
+    left: 180px;">
+
+    <div class="desc-2">
+      <h1>CONNECT INSTANTLY FOR <br>COLLABORATIVE MOMENTS</h1>
+      <p>Experience swift, lag-free text communication that brings <br> you together effortlessly. Share ideas, collaborate, and <br>engage in real-time discussions seamlessly.</p>
+      <img src="{% static 'images/pandaBino.png' %}" alt="">
+      <button class="button">Know More</button>
+    </div>
+    <div class="img-container-2">
+      <div class="obj">
+        <img src="{% static 'images/vector2.png' %}">
+      </div>
+      <img src="{% static 'images/PandaTree.png' %}" alt="studyAnimals" class="img-cont">
+    </div>
+    
+  </div>
+
+  <div class="dark-container">
+    <img src="{% static 'images/penguinSpace.png' %}" alt="" class="img-1">
+    <h1>Hear What Our Users Have to Say</h1>
+    <button class="button">More</button>
+    <div class="cards-container">
+      <div class="cards">
+        <div class="profile">
+          <img src="{% static 'images/ellipse2.png' %}" alt="">
+        </div>
+        <div class="flex-icon">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+      </div>
+        <div class="p-2">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, laboriosam. Cumque atque nihil, quidem omnis asperiores totam ex quam minima!</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="profile">
+          <img src="{% static 'images/ellipse2 (1).png' %}" alt="">
+        </div>
+        <div class="flex-icon">
+        <img src="{% static 'images/star-solid.png' %}g" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+      </div>
+        <div class="p-2">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, laboriosam. Cumque atque nihil, quidem omnis asperiores totam ex quam minima!</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="profile">
+          <img src="{% static 'images/ellipse2 (2).png' %}" alt="">
+        </div>
+        <div class="flex-icon">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+        <img src="{% static 'images/star-solid.png' %}" alt="">
+      </div>
+        <div class="p-2">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, laboriosam. Cumque atque nihil, quidem omnis asperiores totam ex quam minima!</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <footer class="footer-cont" id="abt">
+      <div class="footer-up">
+        <div class="left">
+          <h2>English</h2>
+          <div class="icons-footer">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="right">
+          <div class="row-1">
+            <span>Resources</span>
+            <p>College</p>
+            <p>Support</p>
+            <p>Safety</p>
+            <p>Blog</p>
+            <p>Feedback</p>
+            <p>Creators</p>
+            <p>Community</p>
+            <p>Developers</p>
+            <p>Gaming</p>
+          </div>
+
+          <div class="row-2">
+            <span>Policies</span>
+            <p>Terms</p>
+            <p>Privacy</p>
+            <p>Cookie Settings</p>
+            <p>Guidelines</p>
+            <p>Acknowledgements</p>
+            <p>License</p>
+            <p>Company Information</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-down">
+        <div class="logo-footer"><a href="#home"><img src="{% static 'images/Logo.png' %}" class="logo"></a>
+          <p>PlanX</p>
+        </div>
+        <button class="white-button">SignUp</button>
+      </div>
+  </footer>
+      <!-- external js file  -->
+      <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

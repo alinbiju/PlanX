@@ -1,0 +1,54 @@
+{% load static %}
+<header>
+    <div class="logo-name"><a href="{% url 'home' %}"><img src="{% static 'images/Logo.png' %}" class="logo"></a>
+      <p>PlanX</p>
+    </div>
+    {% if request.user.is_authenticated %}
+
+    <div class="navbar" id="navbar">
+      <ul class="nav-links">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <form method="GET" action="{% url 'homepage' %}">
+            <input name="q" type="text" placeholder="Search Rooms..">
+        </form>
+      </ul>
+      <p style="position: absolute; left: 80%; color: #fff;
+      font-family: 'Laila', sans-serif;">Hello, <span style="font-weight: 600; text-transform: capitalize;font-size: 20px; padding-left: 5px;"> {{ request.user.username }}</span></p>
+      <a href="{% url 'logout' %}" class="login-btn">Logout</a>
+      
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    {% else %}
+    <div class="navbar" id="navbar">
+        <ul class="nav-links">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <form method="GET" action="{% url 'home' %}">
+              <input name="q" type="text" placeholder="Search Rooms..">
+          </form>
+        </ul>
+        
+        <a href="{% url 'login' %}" class="login-btn">Login</a>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+    {% endif %}
+  </header>
+
+
+
+
+
+
+<!-- {% if request.user.is_authenticated %}
+<p>Hello {{ request.user }}</p>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+<a href="{% url 'login' %}">Login</a>
+{% endif %}
+<hr> -->

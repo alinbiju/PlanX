@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .profile-container{
+        display: flex;
+        /* grid-template-columns: 1fr 3fr 1fr; */
+        top: 77%;
+        
+    }
+</style>
+
+<h1>{{ user.username }}</h1>
+
+<div class="profile-container">
+   
+        {% include 'base/topic_component.html' %}
+    
+
+    <div style="
+    display: flex;
+    flex-direction: column;
+    width: 52%;
+    margin-right: 29px;
+    margin-top: 45px;">
+        {% include 'base/feed_component.html' %}
+    </div>
+
+    
+        {% include 'base/activity_component.html' %}
+    
+</div>
+
+{% endblock content %}

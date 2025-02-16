@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Lilita+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Lilita One", sans-serif; */
+}
+
+body {
+    background: radial-gradient(#F6F4EB, #fff, #749BC2);
+    height: 100vh;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+  width: 11px;
+}
+
+
+body::-webkit-scrollbar-track{
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4682A9;
+}
+
+/* vector starts here  */
+
+.vector {
+    width: 76px;
+    position: absolute;
+}
+
+/* vector ends here  */
+
+/* header css starts  */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 100px;
+    z-index: 10000;
+  }
+
+   
+  header.sticky{
+    padding: 5px 100px;
+    background: #4682A9;
+    border-radius: 0 0 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    height: 65px;
+  }
+  
+  header.sticky ul li a{
+    color: #4682A9;
+  }
+  
+
+  header .logo {
+    position: relative;
+    width: 52px;
+    transition: all 0.6s ease 0s;
+    padding: 3px;
+    background: #4682a9;
+    border-radius: 50%;
+}
+  
+  .navbar {
+    display: contents;
+    justify-content: center;
+    padding: 0 50px;
+    position: relative;
+    width: 100%;
+}
+  
+  .nav-links{
+    position: relative;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-family: "Laila", serif;
+    font-style: normal;
+  }
+  
+  
+  .nav-links li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4682A9;
+    border-radius: 20px;
+    background: #fff;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    padding: 4px 15px;
+}
+
+
+
+  .nav-links li a:hover{
+    background: #4682A9;
+    color: #fff;
+    transition: 0.2s;
+    /* padding: 5px 10px; */
+}
+  
+
+.login-btn {
+    background: #4682A9;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: "Lilita One", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:lighter;
+    border-radius: 30px;
+}
+
+.login-btn:hover{
+    background: #fff;
+    color: #4682A9;
+    transition: 0.2s;
+}
+
+.sticky .login-btn{
+    border: solid #fff;
+}
+
+.sticky .login-btn:hover{
+    border-color: #4682A9;
+    border-style: solid;
+}
+
+.navbar .icon {
+  display: none;
+  color: #4682A9;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-name p {
+    font-size: 38px;
+    cursor: pointer;
+    font-family: "Lilita One", sans-serif;
+    color: #4682A9;
+}
+
+.sticky .logo-name p {
+    font-size: 38px;
+    font-family: "Lilita One", sans-serif;
+    color: #fff;
+}
+
+/* header css ends  */
+
+/* Image description css starts  */
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 25%;
+    margin: 25px;
+    margin-bottom: 14%;
+    padding-left: 60px;
+}
+
+.container-2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 25%;
+    margin: 25px;
+    margin-bottom: 13%;
+    padding-left: 60px;
+}
+
+img.img-cont {
+    width: 28%;
+    position: absolute;
+    left: 37%;
+    top: -26%;
+}
+
+.obj img {
+    width: 78%;
+    left: 41px;
+    top: -25px;
+    position: relative;
+}
+
+.container .desc {
+    align-items: center;
+    margin: 2px 20px;
+    padding: 10px 38px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    display: flex;
+    /* position: relative; */
+    justify-content: center;
+}
+
+.img-container-2 {
+    display: flex;
+    position: relative;
+    top: -47px;
+}
+
+.container-2 .img-container-2 {
+    display: flex;
+    position: relative;
+    top: -243px;
+    justify-content: flex-end;
+    left: -7%;
+}
+
+.container-2 .img-container-2 img.img-cont {
+    top: -59px;
+    left: 70%;
+    width: 28%;
+    transition: 0.5s;
+}
+
+.img-container-2 img.img-cont {
+    top: 29%;
+}
+
+.container .desc h1 {
+    font-size: 58px;
+    font-weight: 100;
+    font-family: "Lilita One", sans-serif;
+    color: #4682a9;
+}
+
+.container .desc p {
+    font-size: 22px;
+    font-family: "Laila", serif;
+}
+
+.container-2 .desc-2 {
+    padding-left: 4%;
+    position: relative;
+    top: 98px;
+}
+
+.desc-2 h1 {
+    font-size: 58px;
+    font-weight: 100;
+    font-family: "Lilita One", sans-serif;
+    color: #4682a9;
+}
+
+.desc-2 p {
+    font-size: 22px;
+    font-family: "Laila", serif;
+}
+
+.container-2 .desc-2 {
+    padding-left: 4%;
+    position: relative;
+    top: 10px;
+}
+
+.desc-2 {
+    padding-left: 33%;
+}
+
+.img-container-2 img.img-cont {
+    top: -69px;
+    left: 3%;
+    width: 31%;
+}
+
+.img-container-2 img.img-cont-2 {
+    position: relative;
+    top: 60px;
+    left: -34%;
+    width: 25%;
+    transition: 0.2s;
+}
+
+.img-container-2 img.img-cont-2{
+    animation: floatUp 1s ease-in-out infinite;
+}
+
+.img-container-2 img.img-cont-2:hover {
+    position: relative;
+    top: 50px;
+    left: -34%;
+    width: 25%;
+    transition: 0.2s;
+}
+
+.img-container-2 .obj img {
+    width: 73%;
+    left: 98px;
+    top: 26px;
+    position: relative;
+}
+
+.container-2 .img-container-2 .obj img {
+    width: 73%;
+    left: 98px;
+    top: 26px;
+    position: relative;
+    opacity: 0;
+}
+
+.img-container-2 .obj-2 img {
+    width: 80%;
+    left: -52px;
+    top: 189px;
+    position: relative;
+}
+
+.container-2 .desc-2 img {
+    display: flex;
+    width: 15%;
+    top: 99%;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.button {
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 9px 0;
+    background: #4682A9;
+    color: #fff;
+    border: solid #183F58;
+    font-family: "Laila", serif;
+    transition: 0.3s;
+    
+}
+
+.container-2 .desc-2 .button {
+    padding: 12px 25px;
+    position: absolute;
+    font-size: 16px;
+    margin: 9px 0;
+    top: 154%;
+    background: #4682A9;
+    color: #fff;
+    border: solid #183F58;
+    font-family: "Laila", serif;
+    transition: 0.3s;
+}
+
+.white-button {
+    padding: 15px 34px;
+    font-size: 16px;
+    margin: 9px 0;
+    background: #ffffff;
+    color: #4682a9;
+    border: solid #183F58;
+    font-family: "Lilita One", sans-serif;
+    transition: 0.3s;
+}
+
+.white-button:hover{
+    color: #ffffff;
+    background-color: #4682A9;
+    transition: 0.5s;
+}
+
+.button:hover{
+    color: #4682A9;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.container-2 .desc-2 .button:hover{
+    color: #4682A9;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.buttonCont {
+    position: absolute;
+    left: 90%;
+}
+
+.buttonCont .button-1 {
+    padding: 15px 43px 15px 75px;
+    color: white;
+    font-family: "Lilita One", sans-serif;
+    background: #4682a9;
+    font-size: 29px;
+    border-radius: 25px 0 0 0;
+    border: none;
+    transition: 0.3s;
+}
+
+.buttonCont .button-1:hover{
+    transition: 0.3s;
+    background: #fff;
+    border:solid #4682A9;
+    color: #4682A9;
+    font-size: 26px;
+}
+
+.button-2 {
+    padding: 15px 14px 15px 75px;
+    color: white;
+    font-family: "Lilita One", sans-serif;
+    background: #4682a9;
+    font-size: 29px;
+    border-radius: 0 0 0 25px;
+    margin-top: 6px;
+    border: none;
+}
+
+.button-2:hover{
+    transition: 0.3s;
+    background: #fff;
+    border:solid #4682A9;
+    color: #4682A9;
+    font-size: 26px;
+}
+
+/* Image descritpion css ends  */
+
+
+.dark-container {
+    background: linear-gradient(293deg, #070F16, #28445F);
+    display: flex;
+    height: 108vh;
+    margin: 0 44px;
+    padding: 29px 58px;
+    border-radius: 40px 40px 40px 40px;
+    flex-direction: column;
+}
+
+.dark-container .img-1 {
+    top: 307%;
+    width: 25%;
+    position: absolute;
+    left: 70%;
+    transform: rotate(335deg);
+}
+
+.dark-container h1 {
+    padding-top: 4%;
+    font-weight: 100;
+    font-family: 'Lilita One', sans-serif;
+    color: #fff;
+    font-size: 73px;
+}
+
+.dark-container .button {
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 9px 0;
+    font-weight: 700;
+    width: 110px;
+    background: #4682A9;
+    color: #fff;
+    border: solid #0f2c3e;
+    font-family: "Laila", serif;
+    transition: 0.3s;
+}
+
+.dark-container .button:hover{
+    color: #4682A9;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+/* Define the animation */
+@keyframes floatUpDown {
+    0% {
+      transform: translateY(120deg);
+    }
+    50% {
+      transform: translateY(-20px); /* Adjust the distance the image moves up */
+    }
+    100% {
+      transform: translateY(45deg);
+    }
+  }
+
+  @keyframes floatUp {
+    0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px); /* Adjust the distance the image moves up */
+      }
+      100% {
+        transform: translateY(0);
+      }
+  }
+  
+  /* Apply the animation to the image */
+  .dark-container .img-1 {
+    animation: floatUpDown 5s ease-in-out infinite; /* Adjust the animation duration and timing function as needed */
+  }
+
+
+  .container-2 .img-container-2 img.img-cont {
+    animation: floatUp 2s ease-in-out infinite;
+}
+
+.cards-container {
+    display: flex;
+    /* background: blueviolet; */
+    gap: 25px;
+    flex-direction: row;
+    margin: 21px 0px;
+    padding: 21px 0;
+}
+
+.cards {
+    width: 23%;
+    height: 414px;
+    display: flex;
+    border-radius: 24px;
+    padding: 20px;
+    background: #f2f2f2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile {
+    width: 100px;
+    background: azure;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.p-2 {
+    font-family: 'Laila', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    padding: 12px;
+    border-radius: 20px;
+    background: #4682a9;
+    color: #fff;
+}
+
+.profile img {
+    width: auto;
+}
+
+.cards img {
+    width: 25px;
+}
+
+.profile img {
+    width: auto;
+}
+
+/* footer starts here  */
+
+footer.footer-cont {
+    /* min-height: 50vh; */
+    /* background: linear-gradient(178deg, #437ca1, #081119); */
+    background: #11202d;
+    margin: 25px 0;
+    padding: 35px 75px;
+    border-radius: 40px 40px 0 0;
+}
+
+.footer-up {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.right {
+    padding-bottom: 35px;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.left {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    width: 60%;
+    padding: 30px;
+}
+
+.left h2{
+    font-family: 'Laila', sans-serif;
+    color: #fff;
+}
+
+.icons-footer {
+    display: flex;
+    width: 26%;
+    justify-content: space-between;
+    font-size: 26px;
+    color: #fff;
+}
+
+.row-1 {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Laila', sans-serif;   
+}
+
+.row-2 {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Laila', sans-serif;   
+}
+
+.right span {
+    color: #3981c4;
+    /* text-decoration: underline; */
+    /* text-decoration-color: #fff; */
+    border-bottom-style: inset;
+}
+
+.right p:hover{
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    cursor: pointer;
+}
+
+.footer-down {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-footer p {
+    font-size: 38px;
+    font-family: "Lilita One", sans-serif;
+    color: #4682A9;
+    cursor: pointer;
+}
+
+.logo-footer img {
+    cursor: pointer;
+    width: 45px;
+}
+
+.icons-footer i:hover{
+    color: #3981c4;
+    transition: 0.2s
+}
+
+/* footer ends here  */

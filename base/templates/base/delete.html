@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    .del {
+    background: #162b3f;
+    width: 27%;
+    color: #fff;
+    text-decoration: none;
+    height: 116px;
+    display: flex;
+    border-radius: 25px;
+    gap: 7px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    justify-content: center;
+    font-family: "Laila", serif;
+}
+
+    .del a {
+    color: #fff;
+}
+
+input[type="submit"] {
+    width: 80px;
+    height: 27px;
+    border-radius: 25px;
+    background: #fff;
+    border: none;
+}
+
+</style>
+
+<form method="post" action="" style="
+    position: absolute;
+    display: flex;
+    top: 97px;
+    /* background: #4682a9; */
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;">
+    {% csrf_token %}
+    <div class="del">
+    <p>Are you sure you want to delete "{{obj.name}}"?</p>
+    <a href="{{ request.META.HTTP_REFERER }}">Go back</a>
+
+    <input type="submit" value="Confirm" />
+
+</div>
+</form>
+
+{% endblock content %}

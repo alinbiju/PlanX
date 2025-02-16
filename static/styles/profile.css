@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Lilita+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Lilita One", sans-serif; */
+}
+
+body {
+    background: radial-gradient(#F6F4EB, #fff, #749BC2);
+    /* height: 100vh; */
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+  width: 11px;
+}
+
+
+body::-webkit-scrollbar-track{
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4682A9;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #4682A9;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 0px 100px;
+    z-index: 10000;
+  }
+  
+
+  header .logo {
+    position: relative;
+    width: 52px;
+    transition: all 0.6s ease 0s;
+    padding: 3px;
+    background: #4682a9;
+    border-radius: 50%;
+}
+  
+  .navbar {
+    display: contents;
+    justify-content: center;
+    padding: 0 50px;
+    position: relative;
+    width: 100%;
+}
+  
+.nav-links {
+    position: relative;
+    display: flex;
+    background: #ffffff;
+    list-style: none;
+    justify-content: flex-start;
+    border-radius: 25px;
+    font-weight: 700;
+    /* gap: 0; */
+    padding-left: 20px;
+    width: 25%;
+    font-family: "Laila", serif;
+    font-style: normal;
+    align-items: center;
+}
+  
+.nav-links input[type=text] {
+    float: right;
+    margin-left: 8px;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 18px;
+    font-family: 'Laila', sans-serif;
+    color: #183F58;
+}
+
+  .nav-links i {
+    font-size: 23px;
+    color: #183F58;
+}
+
+.login-btn {
+    background: #fff;
+    color: #4682A9;
+    padding: 10px 20px;
+    font-family: "Lilita One", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    border: solid #183F58;
+    font-weight:lighter;
+    border-radius: 30px;
+}
+
+.login-btn:hover{
+    background: #4682A9;
+    color: #fff;
+    border: solid #fff;
+    transition: 0.2s;
+}
+
+.navbar .icon {
+  display: none;
+  color: #4682A9;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-name p {
+    font-size: 38px;
+    cursor: pointer;
+    font-family: "Lilita One", sans-serif;
+    color: #fff;
+}
+
+
+/* header css ends  */
+
+/* container css starts */
+
+.container {
+    min-height: 100vh;
+    /* background: aqua; */
+    position: relative;
+    margin: 60px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+    position: relative;
+    padding: 32px;
+    gap: 15px;
+    width: 25%;
+}
+
+
+
+
+.left-col-2 {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    font-family: 'Laila', sans-serif;
+    color: #162B3F;
+    font-weight: 500;
+}
+
+.rows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rows button {
+    padding: 4px 25px;
+    background: #132536;
+    cursor: pointer;
+    color: #fff;
+    border: solid #132536;
+    border-radius: 10px;
+    font-family: 'Laila', sans-serif;
+    transition: 0.3s;
+}
+
+
+.rows button:hover{
+    transition: 0.3s;
+    background: #fff;
+    color: #132536;
+    border: solid #132536;
+}
+
+.left-col-1 h2{
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 100;
+    color: #4682A9;
+}
+
+
+.right {
+    display: flex;
+    flex-direction: column;
+    /* background: #67ff00; */
+    position: relative;
+    padding: 19px;
+    width: 25%;
+}
+
+.right-col-1 {
+    display: flex;
+    background: linear-gradient(234deg, #081017, #1F3F5C);
+    border-radius: 20px;
+    padding: 14px;
+    flex-direction: column;
+}
+
+.right-col-1 h2{
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 100;
+    color: #fff;
+}
+
+.right-col-1 hr{
+    margin: 13px 0;
+}
+
+.followers {
+    display: flex;
+    flex-direction: column;
+}
+
+.rows-2 {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile img {
+    width: 43px;
+}
+
+.rows-2 button {
+    width: 25%;
+    height: 31px;
+    background: #fff;
+    cursor: pointer;
+    font-family: 'Laila', sans-serif;
+    border-radius: 10px;
+    border: solid #132536;
+    transition: 0.2s;
+}
+
+.rows-2 button:hover{
+    background: #132536;
+    color: #fff;
+    border: solid #fff;
+    transition: 0.2s;
+}
+
+.profile p{
+    font-family: 'Laila', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.right-col-2 {
+    display: flex;
+    background: linear-gradient(234deg, #081017, #1F3F5C);
+    border-radius: 20px;
+    padding: 17px 14px;
+    margin: 25px 0;
+    flex-direction: column;
+}
+
+.right-col-2 h2{
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 100;
+    color: #fff;
+}
+
+.right-col-2 hr {
+    margin: 13px 0;
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    border: solid #fff;
+    border-radius: 20px;
+    padding: 15px;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.act-1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.prof img {
+    width: 37px;
+}
+
+.prof-2 {
+    font-family: 'Laila', sans-serif;
+    color: #fff;
+    font-size: 11px;
+}
+
+.act-2 p {
+    background: #1F3F5C;
+    border: solid #132536;
+    border-radius: 10px;
+    padding: 6px;
+    color: #fff;
+    font-family: 'Laila', sans-serif;
+    font-size: 13px;
+}
+
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    /* background: #1b00ff; */
+    position: relative;
+    width: 50%;
+    padding: 30px 15px;
+}
+
+.middle-col-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.middle-row1 {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle-row1 h2{
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 100;
+    color: #1F3F5C;
+}
+
+.middle-row1 p{
+    font-family: 'Laila', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #4682A9;
+}
+
+.middle-col-1 button {
+    border-radius: 7px;
+    padding: 9px 15px;
+    background: #4682A9;
+    color: #fff;
+    border: solid #162B3F;
+}
+
+.middle-col-3 {
+    margin: 24px 10px 29px 10px;
+    padding: 10px;
+    font-family: 'Laila',sans-serif;
+}
+
+.middle-col-2 {
+    background: linear-gradient(227deg, #081017, #1F3F5C);
+    border-radius: 20px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+    gap: 10px;
+}
+
+.panel-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.panel-left img {
+    width: 67px;
+}
+
+.panel-left p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Laila', sans-serif;
+}
+
+.panel-1 p{
+    color: #fff;
+    font-family: 'Laila', sans-serif;
+    font-size: 13px;
+}
+
+.panel-2 {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.partic img {
+    width: 46px;
+    padding-right: 5px;
+}
+
+.title h2 {
+    font-family: 'Lilita One', sans-serif;
+    color: #fff;
+    font-size: 26px;
+    padding-top: 14px;
+    font-weight: 100;
+    padding-bottom: 9px;
+}
+
+.panel-3 {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 15px;
+    justify-content: space-between;
+}
+
+.panLeft {
+    display: flex;
+    gap: 11px;
+    font-size: 15px;
+    color: #fff;
+    font-family: 'Laila', sans-serif;
+    align-items: center;
+}
+
+.panel-3 p {
+    font-family: 'Laila', sans-serif;
+    color: #fff;
+    background: #1F3F5C;
+    padding: 7px 15px;
+    border-radius: 10px;
+}
+
+
+.circular {
+    border-radius: 50%;
+    width: 20%;
+}
+
+/* container css ends */

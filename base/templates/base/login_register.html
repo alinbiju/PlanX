@@ -1,0 +1,137 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+      <link rel="stylesheet" href="{% static 'styles/signup.css' %}">
+
+      {% if page == 'login' %}
+
+      <div class="container">
+        <img src="{% static 'images/vector.png' %}" alt="" srcset="" style=" 
+        left: 7%;
+        position: absolute;
+        top: 44%;
+        width: 66px;
+        transform: rotate(302deg);">
+        <img src="{% static 'images/vector.png' %}" alt="" srcset="" style=" 
+       left: 12%;
+        position: absolute;
+        top: 38%;
+        width: 49px;
+        transform: rotate(302deg);">
+        <img src="{% static 'images/vector.png' %}" alt="" srcset="" style=" 
+        left: 73%;
+        position: absolute;
+        top: 8%;
+        width: 66px;
+        transform: rotate(356deg);">
+        <img src="{% static 'images/vector.png' %}" alt="" srcset="" style=" 
+        left: 19%;
+        position: absolute;
+        top: 78%;
+        width: 89px;
+        transform: rotate(242deg);">
+
+        <img src="{% static 'images/penguinPeek.png' %}" alt="" srcset="" class="peng">
+        <div class="cont">
+          <h1 class="dup">Login</h1>
+          <h1 class="dup-1">Login</h1>
+
+          <form method="post" action="">
+
+            {% csrf_token %}
+
+            <div class="cen">
+                <h4>Welcome back!</h4>
+                <p>We’re so excited to see you again!</p>
+            </div>
+
+              <div class="row">
+                  <p>Username</p>
+                  <input type="text" name="username" placeholder="Enter Username"/>
+              </div>
+
+              <div class="row">
+                  <p>Password</p>
+                  <input type="password" name="password" placeholder="Enter Password"/>
+              </div>
+
+              <div class="submitButton">
+                  <input type="submit" value="Login" />
+                  <p>Need an account? <a href="{% url 'register' %}" style="text-decoration: none; color: #fff; text-decoration-line: underline;">Register</a></p>
+              </div>
+          </form>
+
+        </div>
+      </div>
+
+      {% else %}
+
+      <div class="container">
+        <img src="{% static 'images/vector.png' %}" alt="" srcset="" style=" 
+        left: 7%;
+        position: absolute;
+        top: 44%;
+        width: 66px;
+        transform: rotate(302deg);">
+        <img src="{% static 'images/vector.png' %}" alt="" srcset="" style=" 
+       left: 12%;
+        position: absolute;
+        top: 38%;
+        width: 49px;
+        transform: rotate(302deg);">
+        <img src="{% static 'images/vector.png' %}" alt="" srcset="" style=" 
+        left: 73%;
+        position: absolute;
+        top: 8%;
+        width: 66px;
+        transform: rotate(356deg);">
+        <img src="{% static 'images/vector.png' %}" alt="" srcset="" style=" 
+        left: 19%;
+        position: absolute;
+        top: 78%;
+        width: 89px;
+        transform: rotate(242deg);">
+
+        <img src="{% static 'images/penguinPeek.png' %}" alt="" srcset="" class="peng">
+        <div class="cont">
+          <h1 class="dup">Sign Up</h1>
+          <h1 class="dup-1">Sign Up</h1>
+
+          <form method="post" action="">
+            {% csrf_token %}
+
+            <div class="cen">
+                <p>Wanna become <h4>Planexter !</h4></p>
+            </div>
+
+            <!-- {{ form.as_p }} -->
+
+              <div class="row">
+                  <p>Username</p>
+                  <input type="text" name="username" placeholder="Enter your username"/>
+              </div>
+
+              <div class="row">
+                  <p>Password</p>
+                  <input type="password" name="password1"/>
+              </div>
+
+              <div class="row">
+                <p>Password confirmation</p>
+                <input type="password" name="password2"/>
+              </div>
+
+              <div class="submitButton">
+                  <input type="submit" value="Register" />
+                  <p><a href="{% url 'login' %}" style="text-decoration: none; color: #fff; text-decoration-line: underline;">Already have an account?</a></p>
+              </div>
+          </form>
+
+        </div>
+      </div>
+      {% endif %}
+
+
+{% endblock content %}
