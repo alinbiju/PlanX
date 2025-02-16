@@ -82,3 +82,7 @@ Now, open `` in your browser to access **PlanX**.
 5. Create a Pull Request.
 
 ---
+
+## Preview
+
+![PlanX preview](https://github.com/user-attachments/assets/87be09a3-7bd9-4f74-9417-d1bcd8d0deaf)
